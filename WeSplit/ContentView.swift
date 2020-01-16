@@ -53,8 +53,8 @@ struct ContentView: View {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
                 }
                 
-                Section {
-                    Text("Total amount $\(totalPerPerson * (Double(numberOfPeople) ?? 2), specifier: "%.2f")")
+                Section(header: Text("Total amount")) {
+                    Text("$\(totalPerPerson * (Double(numberOfPeople) ?? 2), specifier: "%.2f")")
                 }
             }.navigationBarTitle("WeSplit")
         }
